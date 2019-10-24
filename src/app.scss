@@ -1,0 +1,160 @@
+@import './common';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+body, h1, h2{
+  margin: 0;
+}
+
+.display_none{
+  display: none!important;
+}
+
+#app{
+  background-color: $blue;
+  min-height: 100vh;
+  padding-top: 40px;
+
+  .app__btn{
+    background-color: $blue;
+    border: 1px solid $blue;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  #app__container{
+    max-width: 500px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  #app__header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #202358;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    color: white;
+  }
+
+  /* The Modal (background) */
+  .app__modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+
+    .app__modal__container {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      border: 1px solid #888;
+      max-width: 260px;
+      width: 100%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      animation-name: animatetop;
+      animation-duration: 0.4s
+    }
+
+    /* The Close Button */
+    .app__modal__close {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .app__modal__close:hover,
+    .app__modal__close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .app__modal__header {
+      padding: 2px 16px;
+      background-color: $blue;
+      color: white;
+    }
+
+    .app__modal__content {
+      padding: 15px;
+    }
+
+    .app__form__submit{
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+
+
+
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+
+  .app__form{
+    .app__form__group{
+      margin-top: 15px;
+    }
+    .app__form__elem{
+      label{
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      input{
+        width: calc(100% - 10px);
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid rgb(169, 169, 169);
+      }
+    }
+
+    .app__form__error{
+      .app__form__error__item{
+        display: block;
+        margin-top: 10px;
+        color:red;
+      }
+    }
+
+  }
+
+  .app__list{
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 10px;
+
+    .app__item{
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed #303d85;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+}

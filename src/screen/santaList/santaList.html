@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Santa - List</title>
+</head>
+<body>
+    <section id="app">
+        <div id="app__container">
+            <div id="app__header">
+                <h1>Secret santa</h1>
+            </div>
+            <div id="santa-list">
+                <div class="santa-list__header">
+                    <h2>Santa List</h2>
+                    <button id="santa-list__new" class="app__btn">New santa <i class="fas fa-plus"></i></button>
+                </div>
+                <ul class="app__list" id="santa-list__list">
+                </ul>
+            </div>
+        </div>
+
+        <!-- Modal new santa -->
+        <div class="app__modal" id="santa-list__modal__new">
+            <div class="app__modal__container">
+                <div class="app__modal__header">
+                    <span class="app__modal__close">&times;</span>
+                    <h2>New santa</h2>
+                </div>
+                <div class="app__modal__content">
+                    <form id="santa-list__form__new" class="app__form" action="">
+                        <div class="app__form__elem">
+                            <label for="santa-list__form__new__name">
+                                Label
+                            </label>
+                            <input id="santa-list__form__new__name" class="app__form__input" name="santa-list__form__new__name" type="text">
+                        </div>
+                        <fieldset class="app__form__group">
+                            <legend>Member (Admin)</legend>
+                            <div class="app__form__elem">
+                                <label for="santa-list__form__new__member_name">
+                                    Name
+                                </label>
+                                <input id="santa-list__form__new__member_name" class="app__form__input" name="santa-list__form__new__member_name" type="text">
+                            </div>
+                            <div class="app__form__elem">
+                                <label for="santa-list__form__new__spouse_name">
+                                    Spouse
+                                </label>
+                                <input id="santa-list__form__new__spouse_name" class="app__form__input" name="santa-list__form__new__spouse_name" type="text">
+                            </div>
+                        </fieldset>
+                        <button class="app__form__submit app__btn" type="submit">Add</button>
+                        <div class="app__form__error">
+                            <span class="app__form__error__item no-name display_none">Please write a name</span>
+                            <span class="app__form__error__item no-member-name display_none">Please write a member name</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!------------->
+
+        <!-- Modal join santa -->
+        <div class="app__modal" id="santa-list__modal__join">
+            <div class="app__modal__container">
+                <div class="app__modal__header">
+                    <span class="app__modal__close">&times;</span>
+                    <h2>Join santa</h2>
+                </div>
+                <div class="app__modal__content">
+                    <form id="santa-list__form__join" class="app__form" action="">
+                        <div class="app__form__elem">
+                            <label for="santa-list__form__join__name">
+                                Name
+                            </label>
+                            <input id="santa-list__form__join__name" class="app__form__input" name="santa-list__form__join__name" type="text">
+                        </div>
+                        <div class="app__form__elem">
+                            <label for="santa-list__form__join__spouse">
+                                Spouse
+                            </label>
+                            <input id="santa-list__form__join__spouse" class="app__form__input" name="santa-list__form__join__spouse" type="text">
+                        </div>
+                        <button class="app__form__submit app__btn" type="submit">Join</button>
+                        <div class="app__form__error">
+                            <span class="app__form__error__item name-already display_none">This member is already in Santa</span>
+                            <span class="app__form__error__item no-name display_none">Please write a name</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!------------->
+
+        <!-- Modal show santa -->
+        <div class="app__modal" id="santa-list__modal__show">
+            <div class="app__modal__container">
+                <div class="app__modal__header">
+                    <span class="app__modal__close">&times;</span>
+                    <h2>Show santa</h2>
+                </div>
+                <div class="app__modal__content">
+                    <form id="santa-list__form__show" class="app__form" action="">
+                        <div class="app__form__elem">
+                            <label for="santa-list__form__new__name">
+                                Name
+                            </label>
+                            <input id="santa-list__form__join__show" class="app__form__input" name="santa-list__form__join__name" type="text">
+                        </div>
+                        <button class="app__form__submit app__btn" type="submit">Show</button>
+                        <div class="app__form__error">
+                            <span class="app__form__error__item no-member display_none">This member does'nt exist</span>
+                            <span class="app__form__error__item no-name display_none">Please write a name</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!------------->
+    </section>
+</body>
+</html>

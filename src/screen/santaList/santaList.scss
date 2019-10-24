@@ -1,0 +1,17 @@
+
+#santa-list{
+  padding: 20px;
+
+  .santa-list__header{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #santa-list__new{
+    .fa-plus{
+      margin-left: 5px;
+    }
+  }
+}
+
+
